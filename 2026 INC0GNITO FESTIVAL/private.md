@@ -19,12 +19,17 @@ contract FlagContract {
 }
 ```
 
-이후 Sepolia Etherscan에 접속해서 트랜잭션을 추적한다. 
+* flag 변수는 private으로 선언되어 외부 계약에서 접근이 불가능함.
+
+* 하지만 constructor에서 flag 값을 "YOU_SHALL_NOT_PASS"로 덮어쓰고 있음.
+
+* 블록체인의 모든 데이터는 공개되어 있으며 private은 Visibility의 제한일 뿐 Security 수단이 아님. 또한 과거의 트랜잭션 기록에는 덮어쓰기 전의 데이터가 남아있을 수 있음.
 
 
 <img width="636" height="166" alt="image" src="https://github.com/user-attachments/assets/f7ef9ea1-123b-4988-8084-6a3a7ac0c9c5" />
 
-이렇게 힌트가 나와있으므로 address 를 따라서 찾아가보면   
+이렇게 힌트가 나와있으므로 Chain ID: 11155111는 Sepolia Testnet    
+이후 address 를 따라서 찾아가보면   
 
 
 
